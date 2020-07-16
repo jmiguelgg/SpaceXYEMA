@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './components/card'
 import { useQuery, gql } from '@apollo/client';
 
 const GET_LAUNCHES = gql`{
@@ -25,7 +26,7 @@ const App = () => {
     )
     if(data) return(
         <div>
-            {console.log(data.launchesPast[0].mission_name)}
+            <Card info={data.launchesPast[0]} />
             <p>Los datos ya llegaron</p>
         </div>
     )
