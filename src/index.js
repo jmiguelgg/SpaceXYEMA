@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { ApolloProvider } from '@apollo/client';
+import "./index.css";
 
 const client = new ApolloClient({
   uri: 'https://api.spacex.land/graphql/',
