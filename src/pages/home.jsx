@@ -17,18 +17,13 @@ const GET_LAUNCHES = gql`{
 
 const App = () => {
   const {loading, error, data} = useQuery(GET_LAUNCHES)
-    if(loading) return <p>Esta cargando ...</p>
-    if(error) return(
-        <div>
-            <p>Ha ocurrido un error...</p>
-            {console.log(error)}
-        </div>
-    )
-    if(data) return(
-        <div>
-            <Card info={data.launchesPast[0]} />
-            <p>Los datos ya llegaron</p>
-        </div>
+  if(loading) return <p>Esta cargando...</p>
+  if(error) return <p>Ocurrio un error...</p>
+  if(data) return(
+      <div className="container mx-auto px-4 w-1/2 mx-auto">
+        <h1>Hola</h1>
+        <Card info={data.launchesPast[0]}/>
+      </div>
     )
 }
 
