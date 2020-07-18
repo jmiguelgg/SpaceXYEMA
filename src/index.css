@@ -14527,6 +14527,10 @@ video {
   transition-delay: 1000ms;
 }
 
+.fill-white{
+  fill: white;
+}
+
 @media (min-width: 440px) {
   .sm\:container {
     width: 100%;
