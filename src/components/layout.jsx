@@ -4,7 +4,8 @@ import NavBar from './navBar'
 const Layout = (props) => {
     return(
         <React.Fragment>
-            <div className="bg-gray-800 h-full w-screen">
+            <link rel="stylesheet" href="https://pagecdn.io/lib/font-awesome/5.10.0-11/css/all.min.css" integrity="sha256-p9TTWD+813MlLaxMXMbTA7wN/ArzGyW/L7c5+KkjOkM=" crossorigin="anonymous"></link>
+            <div className="h-full w-screen">
                 <NavBar/>
                 {props.children}
             </div>

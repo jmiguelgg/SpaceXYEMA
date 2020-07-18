@@ -14531,6 +14531,14 @@ video {
   fill: white;
 }
 
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
 @media (min-width: 440px) {
   .sm\:container {
     width: 100%;

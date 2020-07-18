@@ -1,5 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client';
+import Loading from '../components/loading'
+import Error from '../components/error'
 
 const GET_COMPANY_INFO = gql`
     {
@@ -17,8 +19,12 @@ const GET_COMPANY_INFO = gql`
 
 const About = () => {
     const {loading, error, data} = useQuery(GET_COMPANY_INFO)
-    return(
-        <h1>About page</h1>
+    if(loading) return(<Loading/>)
+    if(error) return (<Error className="h-full"/>)
+    if(data) return(
+        <div className="container px-5 h-full w-full mx-auto">
+            
+        </div>
     )
 }
 

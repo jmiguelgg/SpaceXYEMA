@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import PageCards from '../components/pageCards'
 import { useQuery, gql } from '@apollo/client';
+import Loading from '../components/loading'
+import Error from '../components/error'
 
 const GET_LAUNCHES = gql`{
   launchesPast {
@@ -43,14 +45,14 @@ const App = () => {
       }
     }
 
-    if(loading) return <p>Esta cargando...</p>
-    if(error) return <p>Ocurrio un error...</p>
+    if(loading) return(<Loading/>)
+    if(error) return <Error className="h-full"/>
     if(data) {
       let items = data.launchesPast.length
       numPages = (items-items%12)/12
       numPages += items%12 !== 0 ? 1:0
       return(
-      <div className="container px-5 w-full mx-auto">
+      <div className="container px-5 h-full w-full mx-auto">
         <PageCards info={{'page':page,'data':data}}/>
         <div className="flex flex-col items-center py-12">
           <div className="flex text-gray-700">

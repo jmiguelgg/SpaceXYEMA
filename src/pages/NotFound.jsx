@@ -1,9 +1,10 @@
 import React from 'react'
+import Error from '../components/error'
 
 const NotFound = () => {
     return(
-        <div>
-            <h1>Página no encontrada...</h1>
+        <div className="h-full">
+            <Error/>
         </div>
     )
 }
