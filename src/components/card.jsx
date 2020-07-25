@@ -7,7 +7,7 @@ const Card = (props) => {
 
     return(
         <div className="bg-white w-72 mx-auto rounded overflow-hidden shadow-lg my-2">
-            <img className="w-full h-64 mx-auto" src={props.info.links.flickr_images[randomNum] == null ? 'https://www.tryngo.ch/img/no-img.jpg':props.info.links.flickr_images[randomNum]} alt="Lauching momment"/>
+            <img className="w-full h-64 mx-auto" loading="lazy" src={props.info.links.flickr_images[randomNum] == null ? 'https://www.tryngo.ch/img/no-img.jpg':props.info.links.flickr_images[randomNum]} alt="Lauching momment"/>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{props.info.mission_name}</div>
                 <p className="text-grey-darker text-base">{date}</p>
